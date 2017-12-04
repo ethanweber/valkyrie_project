@@ -17,17 +17,30 @@ data_payload = json.dumps({
         "timestamp": 1486691399249288,
         "setgeometry": [
                 {
-                        "path": ["robot1", "link1"],
+                        "path": ["box_mass"],
                         "geometry": {
-                                "type": "box",
+                                "type": "sphere",
                                 "color": [1, 0, 0, 0.5],
-                                "lengths": [1, 0.5, 2]
+                                "radius": 0.2
                         }
                 }
         ],
-        "settransform": [],
+        "settransform": [
+                {
+                        "path": ["box_mass"],
+                        "transform": {
+                                "translation": [0.00745367, -0.000964868, 0.960629],
+                                "quaternion": [1, 0, 0, 0]
+                        }
+                }
+        ],
         "delete": []
 })
+
+# 0.00745367
+# -0.000964868
+#     0.960629
+
 msg.data = data_payload
 msg.num_bytes = len(data_payload)
 

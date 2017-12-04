@@ -1,0 +1,9 @@
+package robotlocomotion;
+
+struct viewer_link_data_t {
+  string name;
+  int32_t robot_num;
+
+  int32_t num_geom;
+  viewer_geometry_data_t geom[num_geom];
+}

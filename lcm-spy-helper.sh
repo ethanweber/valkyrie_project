@@ -12,8 +12,11 @@ if [ $? != 0 ] ; then
     fi
 fi
 
-lcm-gen -j lcm_types/viewer2_comms_t.lcm
+lcm-gen -j lcm_types/*.lcm
 
 javac -cp $LCM_JAR robotlocomotion/*.java
+javac -cp $LCM_JAR bot_core/*.java
 
-jar cf lcm-spy.jar robotlocomotion/*.class
+jar cf lcm-spy.jar bot_core/*.class robotlocomotion/*.class
+
+# bot_core/*.class
